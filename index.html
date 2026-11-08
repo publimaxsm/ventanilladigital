@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ventanilla Digital — Falcón</title>
+<meta name="description" content="Ventanilla Digital trazable e interoperable: propuesta de intervención para la gestión y trazabilidad de trámites ciudadanos en la Gobernación del estado Falcón. Diplomado en Gobernabilidad e Innovación Pública · UCAB · CAF.">
+<link rel="icon" href="assets/simbolo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<div class="progreso" aria-hidden="true"><span></span></div>
+
+<header class="barra" id="barra">
+  <a href="#inicio" class="barra__marca" aria-label="Ventanilla Digital — inicio"><svg role="img" aria-label="Ventanilla Digital" xmlns="http://www.w3.org/2000/svg" viewBox="511.216 345.579 1042.7640000000001 369.3"><path d="M654.425 347.579 C576.437 347.579 513.216 410.8 513.216 488.788 L513.216 529.613 L558.893 529.613 C611.654 529.613 654.425 486.842 654.425 434.081 Z" fill="#fab855"/><path d="M513.216 551.302 L513.216 692.163 C513.216 703.604 522.491 712.879 533.932 712.879 L654.425 712.879 L654.425 646.833 C654.425 594.072 611.654 551.302 558.894 551.302 Z" fill="#737d54"/><path d="M817.322 529.613 L817.322 488.788 C817.322 410.8 754.101 347.579 676.113 347.579 L676.113 434.082 C676.113 486.842 718.884 529.613 771.645 529.613 Z" fill="#97a5d5"/><path d="M676.114 646.833 L676.114 712.879 L799.26 712.879 C809.235 712.879 817.322 704.792 817.322 694.816 L817.322 551.302 L771.645 551.302 C718.884 551.302 676.114 594.072 676.114 646.833" fill="#c69c6d"/><path d="M1371.385 416.907 C1374.048 414.444 1377.499 413.209 1381.74 413.209 C1385.978 413.209 1389.43 414.369 1392.093 416.685 C1394.755 419.002 1396.086 421.986 1396.086 425.633 C1396.086 429.479 1394.777 432.66 1392.166 435.173 C1389.553 437.688 1386.077 438.946 1381.74 438.946 C1377.499 438.946 1374.048 437.713 1371.385 435.247 C1368.723 432.784 1367.391 429.726 1367.391 426.077 C1367.391 422.431 1368.723 419.372 1371.385 416.907 Z M1407.326 529.612 L1407.326 419.865 L1430.4 419.865 L1430.4 529.612 Z M1444.452 529.612 L1444.452 419.865 L1467.526 419.865 L1467.526 529.612 Z M894.384 529.613 L849.714 426.077 L875.599 426.077 L907.087 500.026 L939.053 426.077 L962.865 426.077 L918.049 529.613 Z M1140.058 450.039 L1140.058 432.436 L1163.131 432.436 L1163.131 450.039 L1182.95 450.039 L1182.95 467.788 L1163.131 467.788 L1163.131 501.955 C1163.131 505.307 1164.018 507.896 1165.793 509.719 C1167.568 511.544 1169.984 512.455 1173.041 512.455 C1176.688 512.455 1179.793 511.472 1182.358 509.498 L1188.571 525.767 C1186.205 527.446 1183.369 528.703 1180.067 529.539 C1176.761 530.376 1173.336 530.797 1169.786 530.797 C1160.418 530.797 1153.121 528.407 1147.896 523.623 C1142.668 518.841 1140.058 511.717 1140.058 502.25 L1140.058 467.788 L1127.781 467.788 L1127.781 450.039 Z M971.295 454.106 C977.704 450.607 984.951 448.855 993.037 448.855 C1000.825 448.855 1007.852 450.508 1014.114 453.81 C1020.375 457.115 1025.329 461.848 1028.979 468.009 C1032.626 474.172 1034.453 481.543 1034.453 490.122 C1034.453 491.01 1034.401 492.021 1034.304 493.153 C1034.205 494.288 1034.106 495.35 1034.007 496.334 L973.819 496.334 C974.296 498.435 975.057 500.382 976.102 502.176 C978.026 505.481 980.735 507.996 984.236 509.719 C987.736 511.446 991.853 512.308 996.586 512.308 C1000.825 512.308 1004.55 511.668 1007.754 510.386 C1010.956 509.105 1013.893 507.181 1016.555 504.617 L1028.83 517.929 C1025.182 522.07 1020.596 525.249 1015.075 527.468 C1009.551 529.688 1003.192 530.797 995.995 530.797 C986.922 530.797 978.96 529.022 972.108 525.472 C965.254 521.922 959.954 517.066 956.208 510.903 C952.46 504.741 950.588 497.716 950.588 489.826 C950.588 481.839 952.436 474.765 956.135 468.601 C959.832 462.439 964.885 457.607 971.295 454.106 Z M1072.612 453.144 C1077.936 450.286 1084.001 448.856 1090.806 448.856 C1097.113 448.856 1102.759 450.112 1107.741 452.627 C1112.719 455.141 1116.638 458.987 1119.498 464.165 C1122.358 469.34 1123.789 475.974 1123.789 484.058 L1123.789 529.613 L1100.715 529.613 L1100.715 487.606 C1100.715 481.198 1099.31 476.465 1096.499 473.409 C1093.689 470.353 1089.718 468.823 1084.594 468.823 C1080.944 468.823 1077.665 469.588 1074.757 471.115 C1071.847 472.645 1069.58 474.986 1067.954 478.141 C1066.326 481.299 1065.512 485.341 1065.512 490.27 L1065.512 529.613 L1042.439 529.613 L1042.439 450.039 L1064.476 450.039 L1064.476 459.491 L1064.476 459.491 C1066.759 456.947 1069.471 454.832 1072.612 453.144 Z M1204.991 451.369 C1211.102 449.695 1217.316 448.856 1223.627 448.856 C1235.756 448.856 1245.17 451.717 1251.877 457.434 C1258.581 463.155 1261.935 472.076 1261.935 484.206 L1261.935 529.613 L1240.34 529.613 L1240.34 519.725 C1238.603 522.646 1236.237 525.006 1233.241 526.804 C1228.804 529.466 1223.084 530.797 1216.084 530.797 C1209.872 530.797 1204.547 529.736 1200.11 527.617 C1195.671 525.498 1192.27 522.613 1189.903 518.964 C1187.537 515.317 1186.355 511.223 1186.355 506.688 C1186.355 501.954 1187.512 497.813 1189.829 494.264 C1192.147 490.714 1195.82 487.929 1200.848 485.907 C1205.878 483.886 1212.434 482.874 1220.521 482.874 L1238.862 482.874 C1238.862 477.945 1237.358 474.099 1234.351 471.338 C1231.342 468.578 1226.734 467.195 1220.521 467.195 C1216.281 467.195 1212.114 467.862 1208.023 469.193 C1203.929 470.524 1200.453 472.324 1197.595 474.591 L1189.312 458.469 C1193.65 455.414 1198.875 453.048 1204.991 451.369 Z M1305.567 453.144 C1310.892 450.286 1316.956 448.856 1323.761 448.856 C1330.069 448.856 1335.715 450.112 1340.696 452.627 C1345.674 455.141 1349.594 458.987 1352.453 464.165 C1355.313 469.34 1356.745 475.974 1356.745 484.058 L1356.745 529.613 L1333.67 529.613 L1333.67 487.606 C1333.67 481.198 1332.265 476.465 1329.454 473.409 C1326.644 470.353 1322.673 468.823 1317.549 468.823 C1313.899 468.823 1310.62 469.588 1307.712 471.115 C1304.802 472.645 1302.535 474.986 1300.909 478.141 C1299.281 481.299 1298.468 485.341 1298.468 490.27 L1298.468 529.613 L1275.394 529.613 L1275.394 450.039 L1297.431 450.039 L1297.431 459.491 L1297.431 459.491 C1299.714 456.947 1302.426 454.832 1305.567 453.144 Z M1495.036 451.369 C1501.147 449.695 1507.361 448.856 1513.672 448.856 C1525.801 448.856 1535.215 451.717 1541.922 457.434 C1548.626 463.155 1551.98 472.076 1551.98 484.206 L1551.98 529.613 L1530.385 529.613 L1530.385 519.725 C1528.648 522.646 1526.282 525.006 1523.286 526.804 C1518.849 529.466 1513.129 530.797 1506.128 530.797 C1499.916 530.797 1494.592 529.736 1490.155 527.617 C1485.716 525.498 1482.315 522.613 1479.948 518.964 C1477.582 515.317 1476.4 511.223 1476.4 506.688 C1476.4 501.954 1477.557 497.813 1479.874 494.264 C1482.191 490.714 1485.865 487.929 1490.893 485.907 C1495.923 483.886 1502.478 482.874 1510.566 482.874 L1528.907 482.874 C1528.907 477.945 1527.403 474.099 1524.396 471.338 C1521.387 468.578 1516.779 467.195 1510.566 467.195 C1506.326 467.195 1502.159 467.862 1498.068 469.193 C1493.974 470.524 1490.498 472.324 1487.64 474.591 L1479.357 458.469 C1483.695 455.414 1488.919 453.048 1495.036 451.369 Z M1370.203 529.612 L1370.203 450.039 L1393.276 450.039 L1393.276 529.612 Z M993.186 466.308 C989.241 466.308 985.765 467.173 982.759 468.896 C979.749 470.624 977.408 473.038 975.732 476.144 C974.648 478.151 973.916 480.394 973.533 482.874 L1012.721 482.874 C1012.347 480.367 1011.603 478.1 1010.49 476.069 C1008.813 473.015 1006.497 470.624 1003.538 468.896 C1000.58 467.173 997.129 466.308 993.186 466.308 Z M1223.036 496.333 C1217.611 496.333 1213.889 497.221 1211.869 498.996 C1209.845 500.772 1208.837 502.989 1208.837 505.653 C1208.837 508.61 1209.994 510.954 1212.311 512.678 C1214.629 514.405 1217.808 515.267 1221.852 515.267 C1225.696 515.267 1229.147 514.356 1232.205 512.53 C1235.261 510.706 1237.481 508.019 1238.862 504.469 L1238.862 496.333 Z M1513.08 496.333 C1507.656 496.333 1503.933 497.221 1501.914 498.996 C1499.89 500.772 1498.882 502.989 1498.882 505.653 C1498.882 508.61 1500.039 510.954 1502.356 512.678 C1504.673 514.405 1507.853 515.267 1511.897 515.267 C1515.741 515.267 1519.192 514.356 1522.25 512.53 C1525.305 510.706 1527.525 508.019 1528.907 504.469 L1528.907 496.333 Z M977.656 549.58 C980.317 547.116 983.767 545.881 988.009 545.881 C992.247 545.881 995.699 547.041 998.361 549.357 C1001.024 551.674 1002.355 554.658 1002.355 558.305 C1002.355 562.151 1001.047 565.332 998.435 567.846 C995.822 570.36 992.345 571.618 988.009 571.618 C983.767 571.618 980.317 570.386 977.656 567.919 C974.992 565.456 973.661 562.399 973.661 558.749 C973.661 555.103 974.992 552.044 977.656 549.58 Z M1110.921 549.58 C1113.583 547.116 1117.032 545.881 1121.273 545.881 C1125.512 545.881 1128.964 547.041 1131.628 549.357 C1134.289 551.674 1135.621 554.658 1135.621 558.305 C1135.621 562.151 1134.312 565.332 1131.701 567.846 C1129.086 570.36 1125.612 571.618 1121.273 571.618 C1117.032 571.618 1113.583 570.386 1110.921 567.919 C1108.257 565.456 1106.926 562.399 1106.926 558.749 C1106.926 555.103 1108.257 552.044 1110.921 549.58 Z M1285.007 662.285 L1285.007 552.537 L1308.08 552.537 L1308.08 662.285 Z M863.323 662.286 L863.323 558.748 L910.357 558.748 C921.598 558.748 931.509 560.893 940.087 565.183 C948.667 569.473 955.369 575.464 960.203 583.154 C965.032 590.845 967.45 599.967 967.45 610.517 C967.45 620.97 965.032 630.067 960.203 637.806 C955.369 645.548 948.667 651.561 940.087 655.851 C931.509 660.141 921.598 662.286 910.357 662.286 Z M1149.671 582.711 L1149.671 565.109 L1172.744 565.109 L1172.744 582.711 L1192.564 582.711 L1192.564 600.46 L1172.744 600.46 L1172.744 634.627 C1172.744 637.98 1173.632 640.568 1175.406 642.392 C1177.181 644.217 1179.597 645.128 1182.655 645.128 C1186.302 645.128 1189.406 644.144 1191.971 642.17 L1198.185 658.439 C1195.819 660.118 1192.983 661.376 1189.68 662.211 C1186.374 663.049 1182.95 663.469 1179.4 663.469 C1170.032 663.469 1162.735 661.079 1157.509 656.296 C1152.282 651.514 1149.671 644.389 1149.671 634.922 L1149.671 600.46 L1137.394 600.46 L1137.394 582.711 Z M887.284 578.421 L887.284 642.613 L909.174 642.613 C916.075 642.613 922.066 641.307 927.146 638.694 C932.223 636.083 936.167 632.359 938.977 627.527 C941.788 622.696 943.193 617.025 943.193 610.517 C943.193 603.913 941.788 598.218 938.977 593.433 C936.167 588.653 932.223 584.954 927.146 582.34 C922.066 579.73 916.075 578.421 909.174 578.421 Z M1027.424 586.26 C1033.39 583.106 1040.071 581.527 1047.467 581.527 C1054.17 581.527 1060.087 582.883 1065.215 585.596 C1068.555 587.363 1071.415 589.758 1073.793 592.781 L1073.793 582.711 L1095.684 582.711 L1095.684 648.973 C1095.684 663.764 1091.838 674.658 1084.146 681.662 C1076.457 688.661 1065.411 692.164 1051.017 692.164 C1043.522 692.164 1036.299 691.25 1029.348 689.426 C1022.396 687.601 1016.601 684.865 1011.968 681.217 L1021.139 664.652 C1024.489 667.411 1028.756 669.606 1033.933 671.234 C1039.11 672.86 1044.213 673.675 1049.242 673.675 C1057.425 673.675 1063.367 671.849 1067.064 668.202 C1070.761 664.553 1072.61 659.131 1072.61 651.932 L1072.61 648.464 C1070.484 650.845 1068.019 652.79 1065.215 654.299 C1060.087 657.06 1054.17 658.44 1047.467 658.44 C1040.071 658.44 1033.39 656.838 1027.424 653.633 C1021.457 650.429 1016.677 645.942 1013.078 640.174 C1009.477 634.406 1007.678 627.675 1007.678 619.983 C1007.678 612.195 1009.477 605.415 1013.078 599.645 C1016.677 593.877 1021.457 589.418 1027.424 586.26 Z M1214.604 584.041 C1220.716 582.367 1226.93 581.528 1233.24 581.528 C1245.369 581.528 1254.783 584.389 1261.491 590.106 C1268.195 595.827 1271.549 604.749 1271.549 616.878 L1271.549 662.285 L1249.954 662.285 L1249.954 652.397 C1248.217 655.319 1245.851 657.678 1242.855 659.476 C1238.417 662.138 1232.698 663.469 1225.697 663.469 C1219.485 663.469 1214.161 662.408 1209.723 660.29 C1205.285 658.17 1201.884 655.285 1199.516 651.636 C1197.151 647.989 1195.968 643.896 1195.968 639.36 C1195.968 634.626 1197.125 630.485 1199.443 626.936 C1201.76 623.386 1205.434 620.601 1210.462 618.579 C1215.492 616.558 1222.047 615.547 1230.134 615.547 L1248.475 615.547 C1248.475 610.617 1246.972 606.771 1243.965 604.01 C1240.956 601.25 1236.348 599.868 1230.134 599.868 C1225.895 599.868 1221.727 600.534 1217.637 601.865 C1213.543 603.196 1210.067 604.996 1207.209 607.263 L1198.925 591.141 C1203.264 588.086 1208.488 585.72 1214.604 584.041 Z M976.472 662.285 L976.472 582.711 L999.545 582.711 L999.545 662.285 Z M1109.737 662.285 L1109.737 582.711 L1132.81 582.711 L1132.81 662.285 Z M1052.051 600.459 C1048.008 600.459 1044.408 601.273 1041.255 602.9 C1038.097 604.528 1035.609 606.797 1033.784 609.704 C1031.959 612.613 1031.048 616.041 1031.048 619.983 C1031.048 623.829 1031.959 627.231 1033.784 630.19 C1035.609 633.148 1038.097 635.44 1041.255 637.066 C1044.408 638.694 1048.008 639.508 1052.051 639.508 C1056.093 639.508 1059.692 638.694 1062.848 637.066 C1066.004 635.44 1068.47 633.148 1070.244 630.19 C1072.019 627.231 1072.906 623.829 1072.906 619.983 C1072.906 616.041 1072.019 612.613 1070.244 609.704 C1068.47 606.797 1066.004 604.528 1062.848 602.9 C1059.692 601.273 1056.093 600.459 1052.051 600.459 Z M1232.649 629.005 C1227.224 629.005 1223.502 629.893 1221.483 631.668 C1219.459 633.444 1218.45 635.661 1218.45 638.325 C1218.45 641.282 1219.607 643.626 1221.925 645.351 C1224.242 647.077 1227.422 647.939 1231.465 647.939 C1235.31 647.939 1238.761 647.028 1241.818 645.202 C1244.874 643.378 1247.094 640.691 1248.475 637.141 L1248.475 629.005 Z" fill="currentColor"/></svg></a>
+  <nav class="barra__nav" aria-label="Fases">
+    <a href="#fase-1" data-fase="1"><b>I</b> Comprender</a>
+    <a href="#fase-2" data-fase="2"><b>II</b> Definir</a>
+    <a href="#fase-3" data-fase="3"><b>III</b> Idear</a>
+    <a href="#fase-4" data-fase="4"><b>IV</b> Prototipar</a>
+    <a href="#anexos" data-fase="5"><b>A·B</b> Anexos</a>
+  </nav>
+  <button class="barra__menu" aria-expanded="false" aria-controls="menu-movil">Menú</button>
+</header>
+
+<div class="menu-movil" id="menu-movil" hidden>
+  <a href="#fase-1"><b>I</b> Comprender</a>
+  <a href="#fase-2"><b>II</b> Definir</a>
+  <a href="#fase-3"><b>III</b> Idear</a>
+  <a href="#fase-4"><b>IV</b> Prototipar</a>
+  <a href="#anexos"><b>A·B</b> Anexos</a>
+  <a href="#referencias">Referencias</a>
+</div>
+
+<aside class="riel" aria-hidden="true">
+  <span class="riel__codigo">FAL-2026-<em>0001</em></span>
+  <ol>
+    <li data-fase="1"></li><li data-fase="2"></li><li data-fase="3"></li><li data-fase="4"></li><li data-fase="5"></li>
+  </ol>
+</aside>
+
+<main id="contenido">
+
+<!-- ============ PORTADA ============ -->
+<section class="hero" id="inicio" data-codigo="0001">
+  <div class="hero__fondo" aria-hidden="true">
+    <div class="hero__mosaico"><div class="mosaico__p mosaico__p--0" data-velocidad="-0.04"><figure class="petalo petalo--0 " style="--color:var(--amarillo)"><div class="petalo__forma"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_38AifXEnRVzvoggItqHerTyblCc/hf_20261026_060355_fb293dd1-8605-43d5-905a-d1dc73fc54ac_min.webp" width="2752" height="1536" alt="Fila de personas a lo largo de una fachada colonial de oficinas públicas" fetchpriority="high" decoding="async"></div></figure></div><div class="mosaico__p mosaico__p--2" data-velocidad="-0.13"><figure class="petalo petalo--2 " style="--color:var(--lavanda)"><div class="petalo__forma"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_38AifXEnRVzvoggItqHerTyblCc/hf_20261026_060355_2260320a-c367-4a59-a02d-ef990472e91f_min.webp" width="1792" height="2400" alt="Mujer sentada en un banco de una plaza colonial respondiendo una encuesta en su teléfono" fetchpriority="high" decoding="async"></div></figure></div><div class="mosaico__p mosaico__p--1" data-velocidad="-0.09"><figure class="petalo petalo--1 " style="--color:var(--oliva-p)"><div class="petalo__forma"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_38AifXEnRVzvoggItqHerTyblCc/hf_20261026_060355_9f4ee3da-b3a8-4935-8a52-19acabb9aa60_min.webp" width="1856" height="2304" alt="Ciudadana recibe un documento sellado en una taquilla de atención" fetchpriority="high" decoding="async"></div></figure></div><div class="mosaico__p mosaico__p--3" data-velocidad="-0.2"><figure class="petalo petalo--3 " style="--color:var(--camel)"><div class="petalo__forma"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_38AifXEnRVzvoggItqHerTyblCc/hf_20261027_191649_efe6c75a-59f8-428a-856e-8cda7b30d887_min.webp" width="1856" height="2304" alt="Carpeta de expedientes y teléfono con una línea de seguimiento en verde oliva" fetchpriority="high" decoding="async"></div></figure></div></div>
+    <div class="hero__duna" data-velocidad="0.12"></div>
+  </div>
+  <div class="contenedor hero__texto">
+    <p class="kicker revelar">Diplomado en Gobernabilidad e Innovación Pública · Laboratorio de Innovación · 5ta cohorte 2026</p>
+    <h1 class="hero__titulo">
+      <span class="linea"><span>Ventanilla</span></span>
+      <span class="linea"><span>Digital</span></span>
+    </h1>
+    <p class="hero__bajada revelar"><em>trazable e interoperable</em></p>
+    <p class="hero__desc revelar">Propuesta de intervención para la gestión y trazabilidad de trámites ciudadanos en la Gobernación del estado Falcón.</p>
+    <dl class="hero__meta revelar">
+      <div><dt>Integrantes</dt><dd><span class="pc">Nombre y apellido · C.I. · correo</span></dd></div>
+      <div><dt>Lugar y fecha</dt><dd><span class="pc">Lugar</span> · <span class="pc">Mes</span> 2026</dd></div>
+    </dl>
+  </div>
+  <a class="hero__bajar" href="#ficha" aria-label="Bajar a la ficha técnica"><span>Desliza</span><i></i></a>
+  <p class="hero__pie mono">UCAB · CEPyG P. José Virtuoso, SJ · CAF</p>
+</section>
+
+<div class="marquesina" aria-hidden="true">
+  <div class="marquesina__pista">
+    <span>Comprender</span><i></i><span>Definir</span><i></i><span>Idear</span><i></i><span>Prototipar</span><i></i>
+    <span>Comprender</span><i></i><span>Definir</span><i></i><span>Idear</span><i></i><span>Prototipar</span><i></i>
+  </div>
+</div>
+
+<!-- ============ FICHA TÉCNICA ============ -->
+<section class="seccion" id="ficha" data-codigo="0003">
+  <div class="contenedor">
+    <header class="encabezado revelar">
+      <p class="kicker">Ficha técnica del proyecto</p>
+      <h2 class="titulo">Siete campos, <em>un proyecto</em></h2>
+    </header>
+    <ol class="ficha">
+      <li class="revelar"><span class="mono">01</span><h3>Nombre del proyecto</h3><p>Ventanilla Digital: gestión y trazabilidad de trámites ciudadanos en la Gobernación del estado Falcón.</p></li>
+      <li class="revelar ficha__ancha"><span class="mono">02</span><h3>Breve descripción</h3><p>Ventanilla Digital trazable e interoperable que permita registrar cada solicitud, asignarle un código único de seguimiento y consultar su estado en línea, para reducir la fragmentación de canales, los retrasos y la opacidad en la atención de trámites, solicitudes, quejas, reclamos y denuncias.</p></li>
+      <li class="revelar"><span class="mono">03</span><h3>ODS asociado y desafíos</h3><p><span class="pc">Por completar</span></p></li>
+      <li class="revelar"><span class="mono">04</span><h3>Ubicación</h3><p>Estado Falcón · Gobernación del estado Falcón y entes adscritos · municipio, parroquia y sector <span class="pc">Por completar</span></p></li>
+      <li class="revelar"><span class="mono">05</span><h3>Duración total estimada</h3><p><span class="pc">Por completar: etapas o fases con meses por etapa</span></p></li>
+      <li class="revelar"><span class="mono">06</span><h3>Responsables</h3><p><span class="pc">Nombre, apellido y correo de cada integrante</span></p></li>
+      <li class="revelar"><span class="mono">07</span><h3>Costo total</h3><p><span class="pc">Por completar · USD</span></p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ PRESENTACIÓN ============ -->
+<section class="declaracion" id="presentacion" data-codigo="0004">
+  <div class="contenedor">
+    <p class="kicker">Presentación</p>
+    <p class="declaracion__texto" data-palabras>Una Ventanilla Digital trazable e interoperable para que cada ciudadano de Falcón sepa dónde está su trámite, quién lo atiende y cuándo recibirá respuesta.</p>
+    <p class="nota">Ubicación geográfica: estado Falcón — mapa o plano del sector <span class="pc">Por completar</span></p>
+  </div>
+</section>
+
+<!-- ============ FASE I ============ -->
+<section class="banda" data-fase="" aria-label="Gobernación del estado Falcón">
+  <div class="banda__pegajoso">
+    <div class="banda__marco" style="--pos:50% 40%"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_38AifXEnRVzvoggItqHerTyblCc/hf_20261026_060404_54bcfc33-11f8-49d1-a79b-49ce57e97be0_min.webp" width="2752" height="1536" alt="Vista aérea de un centro histórico colonial con techos de teja" loading="lazy" decoding="async"></div>
+    <div class="banda__texto contenedor"><p class="kicker">Gobernación del estado Falcón</p><p class="banda__cita">Gestión y trazabilidad de <em>trámites ciudadanos</em></p></div>
+  </div>
+</section>
+
+<section class="divisor" id="fase-1" data-fase="1" data-codigo="0005" style="--petalo:#FAB855">
+  <div class="divisor__pegajoso">
+    <div class="divisor__numero" data-velocidad="-0.1">I</div>
+    <div class="divisor__foto" aria-hidden="true"><figure class="petalo petalo--0 " style="--color:var(--amarillo)"><div class="petalo__forma"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_38AifXEnRVzvoggItqHerTyblCc/hf_20261026_060355_01f1749a-cf35-4923-9c34-ab3cf95f5643_min.webp" width="2528" height="1696" alt="Un padre y su hija revisan juntos un trámite en el teléfono" loading="lazy" decoding="async"></div></figure></div>
+    <div class="divisor__texto">
+      <p class="kicker">Fase I</p>
+      <h2>Comprender</h2>
+      <p>Fundamentación, antecedentes, justificación y empatía con las personas.</p>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="fundamentacion" data-fase="1" data-codigo="0006">
+  <div class="contenedor">
+<div class="con-foto">
+    <header class="encabezado revelar">
+      <p class="kicker">Fundamentación · La problemática</p>
+      <h2 class="titulo">Ineficiencia y retrasos <em>en la gestión de trámites ciudadanos</em></h2>
+    </header>
+    <figure class="foto foto--apaisada revelar" style="--color:var(--amarillo)"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_38AifXEnRVzvoggItqHerTyblCc/hf_20261026_060404_12024354-b303-4e16-a28e-334dc3a60d79_min.webp" width="2528" height="1696" alt="Oficina de atención al ciudadano con escritorios y personas en espera" loading="lazy" decoding="async" data-velocidad="0.06"></figure>
+    </div>
+    <div class="causas">
+      <article class="causa revelar"><span class="mono">Causa 1</span><h3>Sistemas no comunicados</h3><p>La fragmentación tecnológica incrementa los costos de gestión, genera duplicidad de datos y dificulta la atención integral al ciudadano (CEPAL, 2025).</p></article>
+      <article class="causa revelar"><span class="mono">Causa 2</span><h3>Ausencia de identificador único</h3><p>Sin un código de seguimiento no es posible identificar, registrar y consultar el recorrido de una solicitud desde su recepción hasta su resolución (CEPAL, 2025).</p></article>
+      <article class="causa revelar"><span class="mono">Causa 3</span><h3>Opacidad y comunicación unidireccional</h3><p>La falta de información clara aumenta la intermediación informal y debilita la transparencia en la gestión de trámites (CEPAL, 2025).</p></article>
+      <article class="causa causa--vacia revelar"><span class="mono">Manifestaciones</span><h3>Evidencia</h3><p><span class="pc">Por completar: indicadores cuantitativos o cualitativos y evidencia de empatía</span></p></article>
+    </div>
+  </div>
+</section>
+
+<section class="seccion seccion--duna" id="antecedentes" data-fase="1" data-codigo="0007">
+  <div class="contenedor dos-col">
+    <header class="encabezado revelar">
+      <p class="kicker">Antecedentes</p>
+      <h2 class="titulo">Lo que <em>ya existe</em></h2>
+      <p class="lead">¿Qué otros proyectos o programas existen o existieron que responden a la misma problemática?</p>
+    </header>
+    <ul class="lista-filas">
+      <li class="revelar"><span class="mono">s. f.</span><div><h3>Postegram</h3><p>Postes inteligentes que iluminan y le dan voz a la gente en Venezuela.</p></div></li>
+      <li class="revelar"><span class="mono">2022</span><div><h3>Telser de Venezuela</h3><p>Postes inteligentes con uso de energía solar en Falcón.</p></div></li>
+      <li class="revelar"><span class="mono">2026</span><div><h3>Gobernación Bolivariana del Estado Falcón</h3><p>Plan Estratégico 2026-2030.</p></div></li>
+      <li class="revelar"><span class="mono">—</span><div><h3><span class="pc">Por completar</span></h3><p>Fuente, autor, año y enlace.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="seccion" id="justificacion" data-fase="1" data-codigo="0008">
+  <div class="contenedor">
+    <header class="encabezado revelar">
+      <p class="kicker">Justificación</p>
+      <h2 class="titulo">¿Por qué <em>ahora</em>?</h2>
+    </header>
+    <div class="preguntas">
+      <article class="revelar"><span class="grande">01</span><h3>¿Por qué es importante implementar este proyecto?</h3><p><span class="pc">Por completar · máx. 15 líneas</span></p></article>
+      <article class="revelar"><span class="grande">02</span><h3>¿Qué pasará con la gente o la comunidad si no se aborda oportunamente el problema?</h3><p><span class="pc">Por completar</span></p></article>
+      <article class="revelar"><span class="grande">03</span><h3>Resultados esperados, impacto, componente innovador y ventajas</h3><p><span class="pc">Por completar · máx. 15 líneas</span></p></article>
+    </div>
+  </div>
+</section>
+
+<section class="seccion seccion--oscura" id="empatia" data-fase="1" data-codigo="0009">
+  <div class="contenedor">
+    <header class="encabezado revelar">
+      <p class="kicker">Mapa de empatía</p>
+      <h2 class="titulo"><span class="pc pc--oscuro">Nombre del actor</span></h2>
+      <p class="lead">Un mapa por cada tipo de actor: afectados o beneficiarios, representantes de la comunidad, autoridades y directivos, funcionarios y técnicos, ejecutores.</p>
+    </header>
+    <div class="empatia">
+      <div class="empatia__centro" aria-hidden="true"><span></span></div>
+      <article class="revelar"><h3>Qué piensan y sienten</h3><p><span class="pc pc--oscuro">Por completar</span></p></article>
+      <article class="revelar"><h3>Qué ven y escuchan</h3><p><span class="pc pc--oscuro">Por completar</span></p></article>
+      <article class="revelar"><h3>A qué se dedican</h3><p><span class="pc pc--oscuro">Por completar</span></p></article>
+      <article class="revelar"><h3>Qué dicen y hacen</h3><p><span class="pc pc--oscuro">Por completar</span></p></article>
+      <article class="revelar"><h3>Qué les duele</h3><p><span class="pc pc--oscuro">Por completar</span></p></article>
+      <article class="revelar"><h3>A qué aspiran</h3><p><span class="pc pc--oscuro">Por completar</span></p></article>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="encuesta" data-fase="1" data-codigo="0010">
+  <div class="contenedor">
+    <div class="con-foto con-foto--petalo">
+    <header class="encabezado revelar">
+      <p class="kicker">La encuesta como instrumento de empatía</p>
+      <h2 class="titulo">Escuchar <em>antes de diseñar</em></h2>
+      <p class="lead">El estudio empleará una encuesta estructurada para obtener información primaria sobre la experiencia de los ciudadanos en la gestión de trámites públicos.</p>
+    </header>
+    <figure class="petalo petalo--3 revelar" style="--color:var(--amarillo)"><div class="petalo__forma"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_38AifXEnRVzvoggItqHerTyblCc/hf_20261026_060354_6dbd4b20-3495-49cd-aa6f-b7c776f7b4ea_min.webp" width="1856" height="2304" alt="Manos completando un cuestionario impreso con un bolígrafo azul" loading="lazy" decoding="async" data-velocidad="0.05"></div><figcaption class="mono">Encuesta estructurada</figcaption></figure>
+    </div>
+    <ol class="pasos" data-linea>
+      <li class="revelar"><span class="mono">Paso 01</span><h3>Validación de contenido</h3><p>Revisión del instrumento por expertos.</p></li>
+      <li class="revelar"><span class="mono">Paso 02</span><h3>Prueba piloto</h3><p>Aplicación con un grupo reducido de usuarios.</p></li>
+      <li class="revelar"><span class="mono">Paso 03</span><h3>Aplicación digital</h3><p>El cuestionario se aplicará de manera digital (<a href="#anexo-a">Anexo A</a>).</p></li>
+    </ol>
+    <div class="cifras">
+      <div class="revelar"><b data-contar="6">6</b><span class="mono">Secciones</span></div>
+      <div class="revelar"><b data-contar="28">28</b><span class="mono">Preguntas</span></div>
+      <div class="revelar"><b data-contar="7">7</b><span class="mono">Descriptores</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FASE II ============ -->
+<section class="divisor" id="fase-2" data-fase="2" data-codigo="0011" style="--petalo:#97A5D5">
+  <div class="divisor__pegajoso">
+    <div class="divisor__numero" data-velocidad="-0.1">II</div>
+    <div class="divisor__foto" aria-hidden="true"><figure class="petalo petalo--2 " style="--color:var(--lavanda)"><div class="petalo__forma"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_38AifXEnRVzvoggItqHerTyblCc/hf_20261026_060355_272132d9-3d36-418d-8d83-b70a99e47567_min.webp" width="1856" height="2304" alt="Carpeta de expedientes atada con cordel, un sello y un teléfono con una línea de seguimiento" loading="lazy" decoding="async"></div></figure></div>
+    <div class="divisor__texto">
+      <p class="kicker">Fase II</p>
+      <h2>Definir</h2>
+      <p>Desafío, árbol de problema, causas, descriptores, beneficiarios y viabilidad.</p>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="desafio" data-fase="2" data-codigo="0012">
+  <div class="contenedor">
+    <header class="encabezado revelar"><p class="kicker">Desafío, tema y enunciado</p><h2 class="titulo">Nombrar <em>el problema</em></h2></header>
+    <ol class="filas-grandes">
+      <li class="revelar"><span class="mono">01 · Desafío</span><p><span class="pc">Por completar</span></p></li>
+      <li class="revelar"><span class="mono">02 · Tema</span><p>Gestión y trazabilidad de trámites ciudadanos en la Gobernación del estado Falcón.</p></li>
+      <li class="revelar"><span class="mono">03 · Enunciado del problema</span><p>Ineficiencia y retrasos en la gestión de trámites ciudadanos. <span class="pc">Redacción formal según el árbol de problema · por completar</span></p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="seccion seccion--duna" id="arbol" data-fase="2" data-codigo="0013">
+  <div class="contenedor">
+    <header class="encabezado revelar"><p class="kicker">Árbol de problema</p><h2 class="titulo">De las raíces <em>al problema</em></h2></header>
+    <div class="arbol">
+      <div class="arbol__problema revelar"><span class="mono">Problema</span><p>Ineficiencia y retrasos en la gestión de trámites</p></div>
+      <svg class="arbol__ramas" viewBox="0 0 900 120" preserveAspectRatio="none" aria-hidden="true"><path class="trazo" d="M450 0 V40 M150 120 V60 H750 V120 M450 40 V120 M150 60 H450"/></svg>
+      <div class="arbol__causas">
+        <div class="revelar"><span class="mono">Causa 1</span><p>Sistemas no comunicados</p></div>
+        <div class="revelar"><span class="mono">Causa 2</span><p>Ausencia de identificador único</p></div>
+        <div class="revelar"><span class="mono">Causa 3</span><p>Opacidad y comunicación unidireccional</p></div>
+      </div>
+      <dl class="arbol__contexto">
+        <div class="revelar"><dt>Dónde</dt><dd>Gobernación del estado Falcón y sus entes adscritos</dd></div>
+        <div class="revelar"><dt>Quiénes</dt><dd>Ciudadanos que realizaron trámites, solicitudes, quejas, reclamos o denuncias en los últimos dos años</dd></div>
+        <div class="revelar"><dt>Cuándo / Por qué</dt><dd><span class="pc">Por completar</span></dd></div>
+      </dl>
+      <p class="nota">Fuente del formato: Cárdenas (2026).</p>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="causas" data-fase="2" data-codigo="0014">
+  <div class="contenedor dos-col">
+    <header class="encabezado revelar"><p class="kicker">Causas directas y dimensiones</p><h2 class="titulo">Cuatro causas, <em>cuatro dimensiones</em></h2></header>
+    <ul class="lista-filas">
+      <li class="revelar"><span class="mono">C1</span><div><h3>Sistemas no comunicados</h3></div></li>
+      <li class="revelar"><span class="mono">C2</span><div><h3>Ausencia de identificador único</h3></div></li>
+      <li class="revelar"><span class="mono">C3</span><div><h3>Opacidad y comunicación unidireccional</h3></div></li>
+      <li class="revelar"><span class="mono">C4</span><div><h3><span class="pc">Por completar</span></h3></div></li>
+      <li class="revelar"><span class="mono">Dim.</span><div><h3>Dimensiones de investigación (4)</h3><p><span class="pc">Por completar</span></p></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="horizontal" id="descriptores" data-fase="2" data-codigo="0015">
+  <div class="horizontal__pegajoso">
+    <header class="horizontal__cabeza contenedor"><p class="kicker">Siete descriptores</p><h2 class="titulo">Lo que <em>vamos a medir</em></h2></header>
+    <div class="horizontal__pista">
+      <article><span class="mono">D01</span><h3>Trazabilidad</h3><p>% de trámites con código único de seguimiento y consulta de estatus disponible.</p></article>
+      <article><span class="mono">D02</span><h3>Fragmentación tecnológica</h3><p>Número de canales o sistemas requeridos para iniciar, consultar y culminar un trámite.</p></article>
+      <article><span class="mono">D03</span><h3>Oportunidad de respuesta</h3><p>% de solicitudes respondidas dentro del tiempo establecido.</p></article>
+      <article><span class="mono">D04</span><h3>Claridad informativa</h3><p>% de usuarios que comprenden los recaudos, la dependencia competente y el estado del trámite.</p></article>
+      <article><span class="mono">D05</span><h3>Adopción digital</h3><p>% de solicitudes iniciadas por canales digitales frente a presenciales.</p></article>
+      <article><span class="mono">D06</span><h3>Satisfacción ciudadana</h3><p>Índice de satisfacción con la atención, información y seguimiento.</p></article>
+      <article><span class="mono">D07</span><h3>Percepción de transparencia</h3><p>% de usuarios que consideran la información clara, accesible y verificable.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="matriz" data-fase="2" data-codigo="0016">
+  <div class="contenedor">
+    <header class="encabezado revelar"><p class="kicker">Matriz de operacionalización</p><h2 class="titulo">Descriptor · indicador · <em>causa</em></h2></header>
+    <div class="tabla-envoltura revelar">
+      <table class="tabla">
+        <thead><tr><th>Descriptor</th><th>Indicador</th><th>Causa o problema que mide</th></tr></thead>
+        <tbody>
+          <tr><td>Trazabilidad</td><td>% de trámites con código único de seguimiento y consulta de estatus disponible</td><td>Causa 2: ausencia de identificador único</td></tr>
+          <tr><td>Fragmentación tecnológica</td><td>Número de canales o sistemas requeridos para iniciar, consultar y culminar un trámite</td><td>Causa 1: sistemas no comunicados</td></tr>
+          <tr><td>Oportunidad de respuesta</td><td>% de solicitudes respondidas dentro del tiempo establecido</td><td>Problema central: ineficiencia y retrasos</td></tr>
+          <tr><td>Claridad informativa</td><td>% de usuarios que comprenden los recaudos, la dependencia competente y el estado del trámite</td><td>Causa 3: opacidad y comunicación unidireccional</td></tr>
+          <tr><td>Adopción digital</td><td>% de solicitudes iniciadas por canales digitales frente a presenciales</td><td>Causa 1 y canales desactualizados</td></tr>
+          <tr><td>Satisfacción ciudadana</td><td>Índice de satisfacción con la atención, información y seguimiento</td><td>Problema central y confianza pública</td></tr>
+          <tr><td>Percepción de transparencia</td><td>% de usuarios que consideran la información clara, accesible y verificable</td><td>Causa 3: opacidad cultural</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="banda" data-fase="2" aria-label="Enunciado del problema">
+  <div class="banda__pegajoso">
+    <div class="banda__marco" style="--pos:50% 55%"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_38AifXEnRVzvoggItqHerTyblCc/hf_20261026_060355_fb293dd1-8605-43d5-905a-d1dc73fc54ac_min.webp" width="2752" height="1536" alt="Fila de personas a lo largo de una fachada colonial de oficinas públicas" loading="lazy" decoding="async"></div>
+    <div class="banda__texto contenedor"><p class="kicker">Enunciado del problema</p><p class="banda__cita">Ineficiencia y retrasos <em>en la gestión de trámites ciudadanos</em></p></div>
+  </div>
+</section>
+
+<section class="seccion seccion--duna" id="beneficiarios" data-fase="2" data-codigo="0017">
+  <div class="contenedor dos-col">
+    <header class="encabezado revelar"><p class="kicker">Población beneficiaria o alcance</p><h2 class="titulo">Para <em>quién</em></h2><p class="lead">Usuarios: ciudadanos que hayan realizado trámites ante la Gobernación del estado Falcón durante los últimos dos años.</p></header>
+    <div class="tabla-envoltura revelar">
+      <table class="tabla tabla--compacta">
+        <thead><tr><th>Población</th><th>Cantidad</th></tr></thead>
+        <tbody>
+          <tr><td>La comunidad en general</td><td>[—]</td></tr><tr><td>Niños y niñas</td><td>[—]</td></tr><tr><td>Niños y niñas en riesgo social</td><td>[—]</td></tr><tr><td>Adolescentes</td><td>[—]</td></tr><tr><td>Jóvenes</td><td>[—]</td></tr><tr><td>Personas de la 3ra edad</td><td>[—]</td></tr><tr><td>Personas con discapacidad</td><td>[—]</td></tr><tr><td>Mujeres</td><td>[—]</td></tr><tr><td>Otros (especificar)</td><td>[—]</td></tr>
+        </tbody>
+        <tfoot><tr><td>Total beneficiarios</td><td><span class="pc">Por completar</span></td></tr></tfoot>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="involucrados" data-fase="2" data-codigo="0018">
+  <div class="contenedor">
+    <header class="encabezado revelar"><p class="kicker">Análisis de involucrados · recursos y alianzas</p><h2 class="titulo">Quién gana, <em>quién decide</em></h2></header>
+    <div class="tabla-envoltura revelar">
+      <table class="tabla">
+        <thead><tr><th>Grupos</th><th>Intereses del grupo</th><th>Problemas percibidos</th><th>Interés en el proyecto</th><th>Conflictos potenciales</th></tr></thead>
+        <tbody>
+          <tr><td>Ciudadanos usuarios</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td></tr>
+          <tr><td>Oficina de Atención Ciudadana (OAC)</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td></tr>
+          <tr><td>Direcciones regionales y entes descentralizados</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td></tr>
+          <tr><td class="vacia">Por completar</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="seccion seccion--oscura" id="pestle" data-fase="2" data-codigo="0019">
+  <div class="contenedor">
+    <header class="encabezado revelar"><p class="kicker">Análisis PESTLE · viabilidad del proyecto</p><h2 class="titulo">Seis factores <em>del entorno</em></h2></header>
+    <div class="pestle">
+      <article class="revelar"><b>P</b><h3>Político</h3><p><span class="pc pc--oscuro">Por completar</span></p></article>
+      <article class="revelar"><b>E</b><h3>Económico</h3><p><span class="pc pc--oscuro">Por completar</span></p></article>
+      <article class="revelar"><b>S</b><h3>Social</h3><p><span class="pc pc--oscuro">Por completar</span></p></article>
+      <article class="revelar"><b>T</b><h3>Tecnológico</h3><p><span class="pc pc--oscuro">Por completar</span></p></article>
+      <article class="revelar"><b>L</b><h3>Legal</h3><p><span class="pc pc--oscuro">Por completar</span></p></article>
+      <article class="revelar"><b>E</b><h3>Ecológico</h3><p><span class="pc pc--oscuro">Por completar</span></p></article>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="ishikawa" data-fase="2" data-codigo="0020">
+  <div class="contenedor">
+    <header class="encabezado revelar"><p class="kicker">Diagrama de Ishikawa · malla receptora de información</p><h2 class="titulo">Las espinas <em>del problema</em></h2><p class="lead">La malla receptora prioriza las causas clave a partir de estas espinas. <span class="pc">Por completar</span></p></header>
+    <div class="pez" data-dibujar>
+      <svg viewBox="0 -30 1200 580" role="img" aria-label="Diagrama de Ishikawa: seis causas que convergen en el efecto ineficiencia y retrasos en la gestión de trámites">
+        <g class="pez__lineas">
+          <path class="trazo" d="M40 260 H900"/>
+          <path class="trazo" d="M140 60 L300 260"/><path class="trazo" d="M420 60 L580 260"/><path class="trazo" d="M700 60 L860 260"/>
+          <path class="trazo" d="M140 460 L300 260"/><path class="trazo" d="M420 460 L580 260"/><path class="trazo" d="M700 460 L860 260"/>
+        </g>
+        <g class="pez__textos"><text x="140" y="-4"><tspan x="140" class="cod">C1</tspan><tspan x="140" dy="22">Sistemas no</tspan><tspan x="140" dy="22">comunicados</tspan></text><text x="420" y="-4"><tspan x="420" class="cod">C2</tspan><tspan x="420" dy="22">Ausencia de</tspan><tspan x="420" dy="22">identificador único</tspan></text><text x="700" y="-4"><tspan x="700" class="cod">C3</tspan><tspan x="700" dy="22">Opacidad y comunicación</tspan><tspan x="700" dy="22">unidireccional</tspan></text><text x="140" y="486"><tspan x="140" class="cod">C4</tspan><tspan x="140" dy="22">Canales</tspan><tspan x="140" dy="22">desactualizados</tspan></text><text x="420" y="486" class="vacio"><tspan x="420" class="cod">C5</tspan><tspan x="420" dy="22">[Por completar]</tspan></text><text x="700" y="486" class="vacio"><tspan x="700" class="cod">C6</tspan><tspan x="700" dy="22">[Por completar]</tspan></text></g>
+        <g class="pez__efecto"><rect x="905" y="170" width="295" height="180"/><text x="930" y="215" class="mono-svg">EFECTO</text><text x="930" y="255">Ineficiencia y retrasos</text><text x="930" y="290">en la gestión</text><text x="930" y="325">de trámites</text></g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FASE III ============ -->
+<section class="divisor" id="fase-3" data-fase="3" data-codigo="0021" style="--petalo:#737D54">
+  <div class="divisor__pegajoso">
+    <div class="divisor__numero" data-velocidad="-0.1">III</div>
+    <div class="divisor__foto" aria-hidden="true"><figure class="petalo petalo--1 " style="--color:var(--oliva-p)"><div class="petalo__forma"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_38AifXEnRVzvoggItqHerTyblCc/hf_20261026_060355_9f4ee3da-b3a8-4935-8a52-19acabb9aa60_min.webp" width="1856" height="2304" alt="Ciudadana recibe un documento sellado en una taquilla de atención" loading="lazy" decoding="async"></div></figure></div>
+    <div class="divisor__texto">
+      <p class="kicker">Fase III</p>
+      <h2>Idear</h2>
+      <p>Preguntas generadoras, ideación, priorización y objetivos.</p>
+    </div>
+  </div>
+</section>
+
+<section class="seccion seccion--oscura" id="hmq" data-fase="3" data-codigo="0022">
+  <div class="contenedor">
+    <header class="encabezado revelar"><p class="kicker">Matriz HMQ · preguntas generadoras</p></header>
+    <ol class="hmq">
+      <li class="revelar"><span class="mono">01</span><p>¿Cómo podríamos… <span class="pc pc--oscuro">acción prevista · por completar</span></p></li>
+      <li class="revelar"><span class="mono">02</span><p>Para… ciudadanos que realizan trámites ante la Gobernación del estado Falcón.</p></li>
+      <li class="revelar"><span class="mono">03</span><p>Con el fin de… <span class="pc pc--oscuro">efecto deseado · por completar</span></p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="seccion" id="lienzo" data-fase="3" data-codigo="0023">
+  <div class="contenedor">
+    <header class="encabezado revelar"><p class="kicker">Lienzo de ideas · ideación y selección</p><h2 class="titulo">Muchas ideas, <em>una elección</em></h2><p class="lead">Consigna o pregunta disparadora: <span class="pc">Por completar</span></p></header>
+    <ol class="embudo">
+      <li class="revelar"><span class="mono">Paso 01</span><h3>Ideación</h3><p>Generación libre de ideas · <span class="pc">Por completar</span></p></li>
+      <li class="revelar"><span class="mono">Paso 02</span><h3>Preselección (3)</h3><p><span class="pc">Por completar</span></p></li>
+      <li class="revelar embudo__final"><span class="mono">Paso 03</span><h3>Selección (1)</h3><p>Ventanilla Digital trazable e interoperable</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="seccion seccion--duna" id="scamper" data-fase="3" data-codigo="0024">
+  <div class="contenedor">
+    <header class="encabezado revelar"><p class="kicker">Técnica SCAMPER</p><h2 class="titulo">Siete preguntas <em>para transformar la idea</em></h2><p class="lead">Respuestas de cada técnica: <span class="pc">Por completar</span></p></header>
+    <ul class="scamper">
+      <li class="revelar"><b>S</b><span>Sustituir</span></li><li class="revelar"><b>C</b><span>Combinar</span></li><li class="revelar"><b>A</b><span>Adaptar</span></li><li class="revelar"><b>M</b><span>Modificar</span></li><li class="revelar"><b>P</b><span>Poner en otros usos</span></li><li class="revelar"><b>E</b><span>Eliminar</span></li><li class="revelar"><b>R</b><span>Reorganizar</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="seccion" id="impacto" data-fase="3" data-codigo="0025">
+  <div class="contenedor">
+    <header class="encabezado revelar"><p class="kicker">Priorización</p><h2 class="titulo">Matriz impacto <em>vs esfuerzo</em></h2></header>
+    <div class="cuadrante revelar">
+      <span class="cuadrante__eje cuadrante__eje--y mono">Impacto →</span>
+      <span class="cuadrante__eje cuadrante__eje--x mono">Esfuerzo →</span>
+      <div><h3>Alto impacto · bajo esfuerzo</h3><p><span class="pc">Por completar</span></p></div>
+      <div><h3>Alto impacto · alto esfuerzo</h3><p><span class="pc">Por completar</span></p></div>
+      <div><h3>Bajo impacto · bajo esfuerzo</h3><p><span class="pc">Por completar</span></p></div>
+      <div><h3>Bajo impacto · alto esfuerzo</h3><p><span class="pc">Por completar</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion seccion--duna" id="objetivos" data-fase="3" data-codigo="0026">
+  <div class="contenedor">
+    <header class="encabezado revelar"><p class="kicker">Objetivos y resultados esperados</p><h2 class="titulo">Objetivos <em>del proyecto</em></h2><p class="lead">Se formulan a partir de las causas clave.</p></header>
+    <div class="columnas-4">
+      <article class="revelar"><span class="mono">01 · Objetivo general</span><p><span class="pc">Por completar: ¿qué se quiere y para qué se quiere?</span></p></article>
+      <article class="revelar"><span class="mono">02 · Específico 1</span><p><span class="pc">Por completar</span></p></article>
+      <article class="revelar"><span class="mono">03 · Específicos 2 y 3</span><p><span class="pc">Por completar</span></p></article>
+      <article class="revelar"><span class="mono">04 · Resultados esperados</span><p>Bienes y servicios · <span class="pc">Por completar</span></p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FASE IV ============ -->
+<section class="divisor divisor--oliva" id="fase-4" data-fase="4" data-codigo="0027" style="--petalo:#C69C6D">
+  <div class="divisor__pegajoso">
+    <div class="divisor__numero" data-velocidad="-0.1">IV</div>
+    <div class="divisor__foto" aria-hidden="true"><figure class="petalo petalo--3 " style="--color:var(--camel)"><div class="petalo__forma"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_38AifXEnRVzvoggItqHerTyblCc/hf_20261027_191650_55e69761-b519-4bd8-b455-e1ac34ade358_min.webp" width="1792" height="2400" alt="Teléfono que muestra una línea de tiempo con las etapas de un trámite" loading="lazy" decoding="async"></div></figure></div>
+    <div class="divisor__texto">
+      <p class="kicker">Fase IV</p>
+      <h2>Prototipar</h2>
+      <p>Viaje del usuario, prototipo, planificación, presupuesto e indicadores.</p>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="viaje" data-fase="4" data-codigo="0028">
+  <div class="contenedor">
+    <header class="encabezado revelar"><p class="kicker">Mapa del viaje del usuario</p><h2 class="titulo">Antes, durante <em>y después</em></h2></header>
+    <div class="tabla-envoltura revelar">
+      <table class="tabla tabla--viaje">
+        <thead><tr><th>Etapa</th><th>Antes</th><th>Durante</th><th>Después</th></tr></thead>
+        <tbody>
+          <tr><td>¿Qué hace?</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td></tr>
+          <tr><td>¿Qué servicio, experiencia o proceso realizó?</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td></tr>
+          <tr><td>¿Con quién interactuó?</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td></tr>
+          <tr><td>¿Cómo fue su experiencia?</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td></tr>
+          <tr><td>Puntos de quiebre</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="seccion seccion--duna" id="storyboard" data-fase="4" data-codigo="0029">
+  <div class="contenedor">
+    <header class="encabezado revelar"><p class="kicker">Storyboard</p><h2 class="titulo">La experiencia <em>en cuatro escenas</em></h2></header>
+    <ol class="escenas">
+      <li class="revelar"><div class="escenas__marco"><span>1</span></div><p><span class="pc">Por completar</span></p></li>
+      <li class="revelar"><div class="escenas__marco"><span>2</span></div><p><span class="pc">Por completar</span></p></li>
+      <li class="revelar"><div class="escenas__marco"><span>3</span></div><p><span class="pc">Por completar</span></p></li>
+      <li class="revelar"><div class="escenas__marco"><span>4</span></div><p><span class="pc">Por completar</span></p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="seccion prototipo" id="prototipo" data-fase="4" data-codigo="0030">
+  <div class="contenedor dos-col dos-col--centro">
+    <div>
+      <header class="encabezado revelar"><p class="kicker">Diseño visual del prototipo</p><h2 class="titulo">Funciones <em>a validar</em></h2><p class="lead">Funciones que se validarán con la encuesta (preguntas 25–27).</p></header>
+      <ol class="funciones">
+        <li class="revelar" data-paso="0">Registro digital con comprobante</li>
+        <li class="revelar" data-paso="1">Código único de seguimiento</li>
+        <li class="revelar" data-paso="2">Consulta en línea del estado</li>
+        <li class="revelar" data-paso="3">Notificaciones o alertas</li>
+        <li class="revelar" data-paso="4">Dependencia responsable y tiempo estimado de respuesta</li>
+      </ol>
+      <p class="nota">Diseño visual del prototipo: <span class="pc">Por completar</span></p>
+    </div>
+    <div class="telefono" aria-label="Esquema ilustrativo del seguimiento de un trámite; no es el diseño final" role="img">
+      <div class="telefono__pantalla">
+        <p class="telefono__titulo mono">Seguimiento</p>
+        <p class="telefono__codigo mono">FAL-2026-<span>XXXX</span></p>
+        <ol class="telefono__linea">
+          <li>Registro</li><li>Código asignado</li><li>En revisión</li><li>Notificación</li><li>Respuesta</li>
+        </ol>
+        <p class="telefono__aviso">Esquema ilustrativo</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="plan" data-fase="4" data-codigo="0031">
+  <div class="contenedor">
+    <header class="encabezado revelar"><p class="kicker">Plan de actividades y cronograma</p><h2 class="titulo">Doce meses, <em>tres objetivos</em></h2></header>
+    <div class="gantt revelar" role="table" aria-label="Cronograma: objetivos específicos y meses 1 a 12, por completar">
+      <div class="gantt__fila gantt__cabeza" role="row"><span role="columnheader">Objetivo / actividades</span><span class="gantt__meses" role="columnheader"><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i><i>10</i><i>11</i><i>12</i></span></div>
+      <div class="gantt__fila" role="row"><span role="cell"><b>Objetivo específico 1</b> Actividades 1.1 … 1.n</span><span class="gantt__meses gantt__vacio" role="cell">Por completar</span></div>
+      <div class="gantt__fila" role="row"><span role="cell"><b>Objetivo específico 2</b> Actividades 2.1 … 2.n</span><span class="gantt__meses gantt__vacio" role="cell">Por completar</span></div>
+      <div class="gantt__fila" role="row"><span role="cell"><b>Objetivo específico 3</b> Actividades 3.1 … 3.n</span><span class="gantt__meses gantt__vacio" role="cell">Por completar</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion seccion--duna" id="presupuesto" data-fase="4" data-codigo="0032">
+  <div class="contenedor">
+    <header class="encabezado revelar"><p class="kicker">Presupuesto desglosado</p><h2 class="titulo">Presupuesto</h2></header>
+    <div class="tabla-envoltura revelar">
+      <table class="tabla">
+        <thead><tr><th>Ítem</th><th>Valor unitario</th><th>Unidad</th><th>Observaciones</th><th>Valor</th></tr></thead>
+        <tbody>
+          <tr><td>Ítem 1</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td></tr>
+          <tr><td>Ítem 2</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td></tr>
+          <tr><td>Ítem 3</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td><td class="vacia">Por completar</td></tr>
+        </tbody>
+        <tfoot><tr><td colspan="4">Total</td><td><span class="pc">Por completar</span></td></tr></tfoot>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="indicadores" data-fase="4" data-codigo="0033">
+  <div class="contenedor">
+    <header class="encabezado revelar"><p class="kicker">Formulación de los indicadores</p><h2 class="titulo">Indicadores <em>del proyecto</em></h2></header>
+    <div class="columnas-4">
+      <article class="revelar"><span class="mono">01 · Desempeño</span><p>Tiempo de respuesta · costos de operación · recursos utilizados.</p></article>
+      <article class="revelar"><span class="mono">02 · Resultado</span><p>Número de usuarios o beneficiarios · calidad de servicio · implementación de características clave.</p></article>
+      <article class="revelar"><span class="mono">03 · Impacto</span><p>Mejora en la calidad de vida · reducción de problemas específicos · aumento de la participación ciudadana.</p></article>
+      <article class="revelar"><span class="mono">04 · Del estudio</span><p>Los siete descriptores y sus indicadores (ver <a href="#matriz">matriz</a>).</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="seccion seccion--oscura" id="formulacion" data-fase="4" data-codigo="0034">
+  <div class="contenedor">
+    <header class="encabezado revelar"><p class="kicker">Matriz de formulación del proyecto</p><h2 class="titulo">Ocho <em>componentes</em></h2></header>
+    <ol class="formulacion">
+      <li class="revelar"><span>1</span><h3>Alianzas clave</h3></li>
+      <li class="revelar"><span>2</span><h3>Actividades clave</h3></li>
+      <li class="revelar"><span>3</span><h3>Recursos</h3><p>Tenemos / nos faltan</p></li>
+      <li class="revelar"><span>4</span><h3>Valor público</h3></li>
+      <li class="revelar"><span>5</span><h3>Objetivos</h3><p>General y específicos</p></li>
+      <li class="revelar"><span>6</span><h3>Comunidades destinatarias</h3></li>
+      <li class="revelar"><span>7</span><h3>Sostenibilidad</h3><p>Costos de implementación · fuentes de financiación</p></li>
+      <li class="revelar"><span>·</span><h3>Indicadores</h3></li>
+    </ol>
+    <p class="nota nota--oscura">Contenido de cada componente: <span class="pc pc--oscuro">Por completar</span></p>
+  </div>
+</section>
+
+<section class="banda" data-fase="4" aria-label="La propuesta">
+  <div class="banda__pegajoso">
+    <div class="banda__marco" style="--pos:60% 50%"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_38AifXEnRVzvoggItqHerTyblCc/hf_20261026_060404_387c8d63-c321-43ed-b193-99203d7a0eba_min.webp" width="2752" height="1536" alt="Ciudadano sale por el portón de un edificio colonial" loading="lazy" decoding="async"></div>
+    <div class="banda__texto contenedor"><p class="kicker">La propuesta</p><p class="banda__cita">Ventanilla Digital <em>trazable e interoperable</em></p></div>
+  </div>
+</section>
+
+<section class="seccion" id="valor" data-fase="4" data-codigo="0035">
+  <div class="contenedor">
+    <header class="encabezado revelar"><p class="kicker">Valor público · viabilidad · escalabilidad</p><h2 class="titulo">Valor público <em>y viabilidad</em></h2></header>
+    <div class="columnas-4">
+      <article class="revelar"><span class="mono">01 · Viabilidad</span><p>Técnica, financiera, social e institucional · <span class="pc">Por completar</span></p></article>
+      <article class="revelar"><span class="mono">02 · Valor público</span><p><span class="pc">Por completar</span></p></article>
+      <article class="revelar"><span class="mono">03 · Escalabilidad</span><p>Horizontal, vertical, profunda y alianzas · <span class="pc">Por completar</span></p></article>
+      <article class="revelar"><span class="mono">04 · Sostenibilidad</span><p>Sostenibilidad y sustentabilidad · <span class="pc">Por completar</span></p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ANEXOS ============ -->
+<section class="divisor divisor--claro divisor--foto" id="anexos" data-fase="5" data-codigo="0036" style="--petalo:#5E6A2C">
+  <div class="divisor__pegajoso">
+    <div class="divisor__numero" data-velocidad="-0.1">A·B</div>
+    <div class="divisor__foto" aria-hidden="true"><figure class="petalo petalo--0 " style="--color:var(--oliva)"><div class="petalo__forma"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_38AifXEnRVzvoggItqHerTyblCc/hf_20261027_191649_84791290-b313-4ac9-9057-6c4109c210e8_min.webp" width="1856" height="2304" alt="Hojas de encuesta impresas con un lápiz y un clip" loading="lazy" decoding="async"></div></figure></div>
+    <div class="divisor__texto">
+      <p class="kicker">Anexos</p>
+      <h2>Anexos</h2>
+      <p>Anexo A · Cuestionario aplicado en la fase de empatía.<br>Anexo B · Fichas de los siete descriptores.</p>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="anexo-a" data-fase="5" data-codigo="0037">
+  <div class="contenedor">
+    <header class="encabezado revelar">
+      <p class="kicker">Anexo A · Cuestionario</p>
+      <h2 class="titulo">Encuesta de diagnóstico <em>sobre la gestión y trazabilidad de trámites ciudadanos</em></h2>
+      <p class="lead"><b>Objetivo:</b> identificar la percepción de los ciudadanos sobre los canales, tiempos, información, seguimiento y satisfacción asociados a la gestión de trámites públicos, a fin de fundamentar el diseño de una Ventanilla Digital trazable e interoperable.</p>
+      <p class="lead"><b>Instrucciones:</b> las respuestas son anónimas y confidenciales. Marque la opción que mejor represente su experiencia. No existen respuestas correctas o incorrectas.</p>
+    </header>
+    <div class="cuestionario" id="cuestionario"></div>
+
+    <div class="dos-col anexo-pie">
+      <div class="revelar">
+        <h3 class="subtitulo">Vinculación con los descriptores</h3>
+        <table class="tabla tabla--compacta">
+          <thead><tr><th>Preguntas</th><th>Descriptor que fundamentan</th></tr></thead>
+          <tbody>
+            <tr><td>6, 7, 25</td><td>Adopción digital y fragmentación de canales</td></tr>
+            <tr><td>8, 9, 24</td><td>Claridad informativa</td></tr>
+            <tr><td>10, 11, 12, 13, 14</td><td>Trazabilidad</td></tr>
+            <tr><td>15, 16, 17, 18</td><td>Oportunidad de respuesta y eficiencia</td></tr>
+            <tr><td>19, 20, 21</td><td>Percepción de transparencia</td></tr>
+            <tr><td>23, 22</td><td>Satisfacción ciudadana y confianza pública</td></tr>
+            <tr><td>26, 27, 28</td><td>Necesidades de diseño del prototipo</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="revelar">
+        <h3 class="subtitulo">Recomendación metodológica</h3>
+        <p>Para la fase de prototipado, aplique la encuesta a una muestra intencional de usuarios que hayan realizado trámites recientemente ante la Oficina de Atención Ciudadana, direcciones regionales o entes descentralizados.</p>
+        <p>Puede complementarla con una versión breve dirigida al personal de la OAC, orientada a conocer los cuellos de botella internos, la derivación de expedientes y las necesidades de control operativo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion seccion--duna" id="anexo-b" data-fase="5" data-codigo="0050">
+  <div class="contenedor">
+    <header class="encabezado revelar"><p class="kicker">Anexo B · Descriptores</p><h2 class="titulo">Fichas de los <em>siete descriptores</em></h2></header>
+    <div class="fichas-d">
+      <article class="revelar"><span class="mono">D01</span><h3>Trazabilidad</h3><dl><dt>Indicador</dt><dd>% de trámites con código único de seguimiento y consulta de estatus disponible</dd><dt>Mide</dt><dd>Causa 2: ausencia de identificador único</dd><dt>Preguntas</dt><dd>10–14</dd></dl></article>
+      <article class="revelar"><span class="mono">D02</span><h3>Fragmentación tecnológica</h3><dl><dt>Indicador</dt><dd>Número de canales o sistemas requeridos para iniciar, consultar y culminar un trámite</dd><dt>Mide</dt><dd>Causa 1: sistemas no comunicados</dd><dt>Preguntas</dt><dd>6, 7, 25</dd></dl></article>
+      <article class="revelar"><span class="mono">D03</span><h3>Oportunidad de respuesta</h3><dl><dt>Indicador</dt><dd>% de solicitudes respondidas dentro del tiempo establecido</dd><dt>Mide</dt><dd>Problema central: ineficiencia y retrasos</dd><dt>Preguntas</dt><dd>15–18</dd></dl></article>
+      <article class="revelar"><span class="mono">D04</span><h3>Claridad informativa</h3><dl><dt>Indicador</dt><dd>% de usuarios que comprenden los recaudos, la dependencia competente y el estado del trámite</dd><dt>Mide</dt><dd>Causa 3: opacidad y comunicación unidireccional</dd><dt>Preguntas</dt><dd>8, 9, 24</dd></dl></article>
+      <article class="revelar"><span class="mono">D05</span><h3>Adopción digital</h3><dl><dt>Indicador</dt><dd>% de solicitudes iniciadas por canales digitales frente a presenciales</dd><dt>Mide</dt><dd>Causa 1 y canales desactualizados</dd><dt>Preguntas</dt><dd>6, 7, 25</dd></dl></article>
+      <article class="revelar"><span class="mono">D06</span><h3>Satisfacción ciudadana</h3><dl><dt>Indicador</dt><dd>Índice de satisfacción con la atención, información y seguimiento</dd><dt>Mide</dt><dd>Problema central y confianza pública</dd><dt>Preguntas</dt><dd>22, 23</dd></dl></article>
+      <article class="revelar"><span class="mono">D07</span><h3>Percepción de transparencia</h3><dl><dt>Indicador</dt><dd>% de usuarios que consideran la información clara, accesible y verificable</dd><dt>Mide</dt><dd>Causa 3: opacidad cultural</dd><dt>Preguntas</dt><dd>19–21</dd></dl></article>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="referencias" data-fase="5" data-codigo="0057">
+  <div class="contenedor">
+    <header class="encabezado revelar"><p class="kicker">Referencias</p><h2 class="titulo">Referencias</h2></header>
+    <div class="referencias revelar">
+      <p>Cárdenas, T. (2026). <i>Diseño de proyectos con Design Thinking. Guía para trabajo en equipo</i>. CAF.</p>
+      <p>Comisión Económica para América Latina y el Caribe. (2025). <i>Metodología de marco lógico para la formulación, seguimiento y evaluación de proyectos</i>. Naciones Unidas. <a href="https://www.cepal.org" rel="noopener" target="_blank">https://www.cepal.org</a></p>
+      <p>Gobernación Bolivariana del Estado Falcón. (2026). <i>Plan Estratégico de la Gobernación Bolivariana de Falcón 2026-2030</i>. Despacho del Gobernador.</p>
+      <p>Organización de las Naciones Unidas para la Alimentación y la Agricultura. (2018). <i>Guía para la formulación de proyectos bajo el enfoque de marco lógico</i>. FAO. <a href="https://www.fao.org" rel="noopener" target="_blank">https://www.fao.org</a></p>
+      <p>Postegram. (s. f.). <i>Postes inteligentes que iluminan y le dan voz a la gente en Venezuela</i>. <a href="https://postegram.com.ve/" rel="noopener" target="_blank">https://postegram.com.ve/</a></p>
+      <p>Telser de Venezuela. (2022, 12 de septiembre). <i>Postes inteligentes con uso de energía solar en Falcón</i>. <a href="https://blog.telserdevenezuela.com.ve/postes-inteligentes-con-uso-de-energia-solar-en-falcon/" rel="noopener" target="_blank">https://blog.telserdevenezuela.com.ve/postes-inteligentes-con-uso-de-energia-solar-en-falcon/</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CIERRE ============ -->
+<section class="cierre" id="cierre" data-codigo="0058">
+  <div class="cierre__foto" data-velocidad="0.12" aria-hidden="true"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_38AifXEnRVzvoggItqHerTyblCc/hf_20261026_060404_c467954c-4e80-422d-a442-4fbaf3d9f334_min.webp" width="2752" height="1536" alt="" loading="lazy" decoding="async"></div>
+  <div class="contenedor">
+    <h2 class="cierre__titulo" data-palabras>Gracias</h2>
+    <p class="cierre__texto">Ventanilla Digital trazable e interoperable para la gestión de trámites ciudadanos en la Gobernación del estado Falcón</p>
+    <p class="cierre__meta mono"><span class="pc pc--oscuro">Integrantes</span> · <span class="pc pc--oscuro">Contacto</span> · 2026</p>
+    <a class="boton" href="#inicio">Volver al inicio ↑</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="pie">
+  <div class="contenedor pie__fila">
+    <p class="mono">Ventanilla Digital — Falcón</p>
+    <p class="mono">Diplomado en Gobernabilidad e Innovación Pública · UCAB · CEPyG P. José Virtuoso, SJ · CAF · 2026</p>
+  </div>
+</footer>
+
+<script src="js/datos.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
